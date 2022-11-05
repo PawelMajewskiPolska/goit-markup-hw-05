@@ -43,7 +43,7 @@ body {
 	padding-top: 6px;
 	padding-bottom: 6px;
 	cursor: pointer;
-	border-color: var(--brand-color7);
+	border: none;
 	border-radius: 4px;
 	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -73,7 +73,7 @@ body {
 }
 
 .callus {
-	color: var(--brand-color2);
+	color: var(--brand-color6);
 	text-decoration: none;
 	font-size: 14px;
 	font-weight: 500;
@@ -96,8 +96,8 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	align-self: center;
+	border: none;
 	border-radius: 4px;
-	border-color: var(--brand-color1);
 	box-shadow: 0px 4px rgba(0, 0, 0, 0.15), 0px 4px rgba(0, 0, 0, 0.15),
 		0px 4px rgba(0, 0, 0, 0.15);
 }
@@ -136,30 +136,35 @@ body {
 .customerborder {
 	border: 1px solid var(--brand-color8); /* dodać do var */
 	border-radius: 4px;
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.customerborder:hover {
+	border-color: var(--brand-color1);
+}
+
 .customerslink:hover .icon-logo5 {
 	fill: var(--brand-color1);
-	border: 1px solid var(--brand-color1);
+	/* border: 1px solid var(--brand-color1); */
 }
 .customerslink:hover .icon-logo4 {
 	fill: var(--brand-color1);
-	border: 1px solid var(--brand-color1);
+	/* border: 1px solid var(--brand-color1); */
 }
-.icon-logo3:hover {
+.customerslink:hover .icon-logo3 {
 	fill: var(--brand-color1);
-	border: 1px solid var(--brand-color1);
+	/* border: 1px solid var(--brand-color1); */
 }
 .customerslink:hover .icon-logo2 {
 	fill: var(--brand-color1);
-	border: 1px solid var(--brand-color1);
+	/* border: 1px solid var(--brand-color1); */
 }
 .customerslink:hover .icon-logo1 {
 	fill: var(--brand-color1);
-	border: 1px solid var(--brand-color1);
+	/* border: 1px solid var(--brand-color1); */
 }
 .customerslink:hover .icon-logo {
 	fill: var(--brand-color1);
-	border: 1px solid var(--brand-color1);
+	/* border: 1px solid var(--brand-color1); */
 }
 .envelope svg {
 	position: relative;
@@ -222,16 +227,16 @@ body {
 .footer-icon-linkedin1 {
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	/* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 	fill: var(--brand-color3);
 }
-.footer-icon-instagram2:hover,
+/* .footer-icon-instagram2:hover,
 .footer-icon-twitter1:hover,
 .footer-icon-facebook1:hover,
 .footer-icon-linkedin1:hover {
 	fill: var(--brand-color3);
 	background-color: var(--brand-color1);
-}
+} */
 
 .gap {
 	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -292,23 +297,20 @@ body {
 	width: 370px;
 }
 .icon-envelope {
-	fill: var(--brand-color2);
+	fill: var(--brand-color6);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.icon-smartphone {
+	fill: var(--brand-color6);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .icon-instagram2,
 .icon-twitter1,
 .icon-facebook1,
 .icon-linkedin1 {
 	fill: var(--brand-color8);
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-instagram2:hover,
-.icon-twitter1:hover,
-.icon-facebook1:hover,
-.icon-linkedin1:hover {
-	fill: var(--brand-color3);
-	background-color: var(--brand-color1);
-	border-radius: 50%;
 }
 
 .icon-antenna1,
@@ -326,8 +328,8 @@ body {
 .icon-logo4,
 .icon-logo5 {
 	fill: var(--brand-color8);
-	border: 1px solid var(--brand-color8);
-	border-radius: 4px;
+	/* border: 1px solid var(--brand-color8);
+	border-radius: 4px; */
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .job {
@@ -355,7 +357,7 @@ body {
 	height: 70px;
 	background-color: rgba(47, 48, 58, 0.8);
 	position: absolute;
-	top: 224px;
+	bottom: 0px;
 }
 .jobphoto {
 	display: block;
@@ -376,6 +378,7 @@ body {
 	line-height: 1, 17;
 	color: var(--brand-color3);
 	text-align: center;
+	padding-block: 27px;
 	/* position: absolute;
 	top: 251px;
 	left: 90px; */
@@ -425,18 +428,20 @@ body {
 	height: 4px;
 	display: block;
 	background-image: url("./../images/hover.jpg");
+	border-radius: 2px;
 	position: absolute;
-	top: 28px;
+	top: 45px;
 	left: -2px;
 }
 .link-active-color2::after {
 	content: "";
 	width: 58px;
 	height: 4px;
+	border-radius: 2px;
 	display: block;
 	background-image: url("./../images/hover.jpg");
 	position: absolute;
-	top: 28px;
+	top: 45px;
 	left: -1px;
 }
 
@@ -452,7 +457,7 @@ body {
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
-	color: var(--brand-color2);
+	color: var(--brand-color6);
 	text-decoration: none;
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -662,6 +667,16 @@ body {
 	letter-spacing: 0.03em;
 	color: var(--brand-color3);
 }
+
+.social {
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social:hover svg {
+	fill: var(--brand-color3);
+	background-color: var(--brand-color1);
+	border-radius: 50%;
+}
 .sociallinks {
 	display: flex;
 	list-style: none;
@@ -767,12 +782,13 @@ body {
 	border-radius: 4px;
 	flex-direction: column;
 }
+.modalbutton {
+	border: none;
+}
 
 .close-btn {
 	position: absolute;
 	cursor: pointer;
-	width: 30px;
-	height: 30px;
 	border-radius: 50%;
 	top: 8px;
 	right: 8px;
