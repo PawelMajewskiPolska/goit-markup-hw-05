@@ -658,6 +658,7 @@ body {
 }
 
 .social svg {
+	border-radius: 50%;
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
 		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -665,7 +666,6 @@ body {
 .social:hover svg {
 	fill: var(--brand-color3);
 	background-color: var(--brand-color1);
-	border-radius: 50%;
 }
 .sociallinks {
 	display: flex;
